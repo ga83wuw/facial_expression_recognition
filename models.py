@@ -39,6 +39,5 @@ class FERModel(nn.Module):
         x = self.dropout(x)
         x = nn.functional.softmax(x)
         x = self.fc2(x)
-        x = nn.functional.softmax(x)
         
         return x
