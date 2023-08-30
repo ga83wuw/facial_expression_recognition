@@ -15,7 +15,7 @@ from models import FERModel
 ### DATA ###
 
 # Define the path to your dataset folder
-dataset_path = './archive/'
+dataset_path = '/data/eurova/fer/'
 
 # Define emotion labels and other variables
 emotion_labels = ['angry', 'disgust', 'fear', 'happy', 'sad', 'surprise', 'neutral']
