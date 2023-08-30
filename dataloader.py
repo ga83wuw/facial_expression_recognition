@@ -6,21 +6,17 @@ from torch.utils.data import Dataset
 
 # Define transforms for data preprocessing and augmentation
 
-def transform():
-
-    transform = transforms.Compose([
-        transforms.ToPILImage(),  # Convert NumPy array to PIL image
-        transforms.ToTensor(),
-        transforms.Normalize(mean = [0.5], std = [0.5])  # Normalize to [-1, 1]
-    ])
-
-    return transform
+transform = transforms.Compose([
+    transforms.ToPILImage(),  # Convert NumPy array to PIL image
+    transforms.ToTensor(),
+    transforms.Normalize(mean = [0.5], std = [0.5])  # Normalize to [-1, 1]
+])
 
 # Define a custom dataset class
 class FacialDataset(Dataset):
-    def __init__(self, root_dir, labels, transform = transform()):
+    def __init__(self, root_dir, labels, transform = transform):
         self.root_dir = root_dir
-        self.transform = transform()
+        self.transform = transform
         self.labels = labels
         self.image_paths = []
         self.labels = []
