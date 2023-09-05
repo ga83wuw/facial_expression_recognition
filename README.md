@@ -2,7 +2,7 @@
 
 ### Author: Georgios Athanasiou
 
-![Example Image](./images/Picure1.png) 
+![Example Image](./images/Picture1.png) 
 
 ## Introduction
 
@@ -19,7 +19,7 @@ The FER-2013 dataset, composed of 35,887 grayscale images illustrating seven fac
 
 The dataset revealed a skewed distribution among facial expressions. Notably, the 'disgust' class was underrepresented. Other complexities included ambiguous facial expression labels. Strategies employed included:
 
-![Charts](./images/Picure3.png) 
+![Charts](./images/Picture3.png) 
 
 - **Oversampling**: Addressing class imbalance.
 - **Exclusion of 'disgust' class**: Due to its limited representation and inherent complexities.
@@ -28,17 +28,17 @@ The dataset revealed a skewed distribution among facial expressions. Notably, th
 
 Deep learning, specifically Convolutional Neural Networks (CNNs), was used for the classification task. The progression included:
 
-![Architecture](./images/Picure4.png) 
+![Architecture](./images/Picture4.png) 
 
 - Initial CNN model with a validation accuracy of ~60%.
 
-![Initial Results](./images/Picure5.png) 
+![Initial Results](./images/Picture5.png) 
 
 - Benchmark research: Top Kaggle models had an average accuracy of 65%. A notable paper reached 67.2% using an ensemble approach.
 - Experimentation with vgg13 and vgg16 architectures.
 - Use of both TensorFlow and PyTorch for model development, with TensorFlow yielding superior results.
 
-![Example Image](./images/Picure1.png) 
+![Example Image](./images/Picture1.png) 
 
 ## Novelty
 
@@ -47,19 +47,19 @@ A two-tiered approach was employed:
 1. **Binary emotion classification**: Classifying facial expressions into 'Negative' and 'Positive' emotional spectrums. Achieved a validation accuracy of 85%.
 2. **Granular emotion classification**: Specific models for 'Positive' and 'Negative' emotions yielded validation accuracies of 90% and 70% respectively.
 
-![New Approach](./images/Picure8.png) 
+![New Approach](./images/Picture8.png) 
 
 ## Results
 
-![Results](./images/Picure9.png) 
+![Results](./images/Picture9.png) 
 
 - **Positive expressions**: Consistent performance on both validation and test sets.
 - **Negative expressions**: Improved accuracy on test set compared to existing literature models.
 - **Neutral expression**: Declined performance on the test set.
 
-![Examples](./images/Picure10.png) 
+![Examples](./images/Picture10.png) 
 
-![Comparison](./images/Picure11.png) 
+![Comparison](./images/Picture11.png) 
 
 ## Discussion
 
@@ -74,5 +74,5 @@ While the current progress is notable, there's room for enhancement:
 
 ### Contributions
 
-Contributions, feedback, and improvements are welcome! Please ensure you adhere to our [Contribution Guidelines](./CONTRIBUTING.md) and our [Code of Conduct](./CODE_OF_CONDUCT.md).
+Contributions, feedback, and improvements are welcome!
 
