@@ -1,6 +1,0 @@
-Accuracy for folder /data/eurova/fer/test/surprise: 75.81%
-Accuracy for folder /data/eurova/fer/test/angry: 58.25%
-Accuracy for folder /data/eurova/fer/test/happy: 83.99%
-Accuracy for folder /data/eurova/fer/test/neutral: 58.72%
-Accuracy for folder /data/eurova/fer/test/fear: 45.21%
-Accuracy for folder /data/eurova/fer/test/sad: 59.26%
