@@ -33,22 +33,20 @@ To set up the environment for this project:
 
 1. Clone this repository:
 
-git clone <URL>
+<pre>
+  git clone https://github.com/ga83wuw/facial_expression_recognition.git
+</pre>
 
 2. Install the required packages:
 
 <pre>
-```
 pip install -r requirements.txt
-```
 </pre>   
 
 3. **Running the Model**: Execute the main TensorFlow model using:
 
 <pre>
-```
 python tf_model.py
-```
 </pre>
 
 4. **Testing the Models**: There are test files located in the `tests` directory to validate the performance and functionality of the models.
