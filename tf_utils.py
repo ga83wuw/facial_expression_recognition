@@ -82,8 +82,8 @@ def dataloader(train_dir = '', test_dir = ''):
         target_size = (48, 48),          # Resizes all images to 48x48 pixels
         batch_size = 64,                 # Number of images per batch
         color_mode = "grayscale",        # Converts the images to grayscale
-        class_mode = "categorical",      # Classifies the images into 7 categories
-        subset = "training"              # Uses the training subset of the data
+        class_mode = "categorical",      # Classifies the images into subcategories
+        subset = "training"              
     )
 
     test_generator = validation_datagen.flow_from_directory(
@@ -91,8 +91,8 @@ def dataloader(train_dir = '', test_dir = ''):
         target_size = (48, 48),          # Resizes all images to 48x48 pixels
         batch_size = 64,                 # Number of images per batch
         color_mode = "grayscale",        # Converts the images to grayscale
-        class_mode = "categorical",      # Classifies the images into 7 categories
-        subset = "validation"            # Uses the validation subset of the data
+        class_mode = "categorical",      # Classifies the images into subcategories
+        subset = "training"                 
     )
 
     return train_generator, test_generator

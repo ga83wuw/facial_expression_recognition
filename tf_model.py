@@ -10,8 +10,8 @@ import csv
 
 import tf_utils as utils
 
-train_dir = "/data/eurova/fer/train"
-test_dir = "/data/eurova/fer/test"
+train_dir = "/data/eurova/fer/train_neg"
+test_dir = "/data/eurova/fer/test_neg"
 
 emotion_labels = [subfolder for subfolder in os.listdir(train_dir) if os.path.isdir(train_dir)]
 print(emotion_labels)
