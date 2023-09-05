@@ -10,10 +10,11 @@ The FER-2013 dataset, composed of 35,887 grayscale images illustrating seven fac
 
 ## Table of Contents
 1. [Data Preparation](#data-preparation)
-2. [Strategy](#strategy)
-3. [Novelty](#novelty)
-4. [Results](#results)
-5. [Discussion](#discussion)
+2. [Installation](#installation)
+3. [Strategy](#strategy)
+4. [Novelty](#novelty)
+5. [Results](#results)
+6. [Discussion](#discussion)
 
 ## Data Preparation
 
@@ -23,6 +24,38 @@ The dataset revealed a skewed distribution among facial expressions. Notably, th
 
 - **Oversampling**: Addressing class imbalance.
 - **Exclusion of 'disgust' class**: Due to its limited representation and inherent complexities.
+
+## Installation
+
+To set up the environment for this project:
+
+0. The data is not available here, so modifications are required to define the paths for the data.
+
+1. Clone this repository:
+
+git clone <URL>
+
+2. Install the required packages:
+
+<pre>
+```
+pip install -r requirements.txt
+```
+</pre>   
+
+3. **Running the Model**: Execute the main TensorFlow model using:
+
+<pre>
+```
+python tf_model.py
+```
+</pre>
+
+4. **Testing the Models**: There are test files located in the `tests` directory to validate the performance and functionality of the models.
+5. **Exploration and Plotting**: Jupyter notebooks located in the `nb` folder provide exploratory data analysis and plotting utilities.
+6. **PyTorch Files**: Alternative approaches using PyTorch can be found in the `pt_files` directory.
+7. **Logs**: All logs generated during model training and evaluation are stored in the `logs` directory.
+8. **Results**: The results, including model weights and evaluation metrics, can be found in the `results` directory.
 
 ## Strategy
 
