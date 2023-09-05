@@ -11,8 +11,6 @@ from torchvision.utils import make_grid
 import csv
 from sklearn.metrics import precision_score, recall_score, f1_score
 
-
-
 from dataloader import FacialDataset
 from utils import EarlyStopper
 from models import FERModel
@@ -27,29 +25,11 @@ dataset_path = '/data/eurova/fer/'
 train_folder_path = os.path.join(dataset_path, 'train')
 
 # Define emotion labels and other variables
-emotion_labels = ['angry', 'disgust', 'fear', 'happy', 'sad', 'surprise', 'neutral']
-#emotion_labels = ['happy', 'sad']
-#emotion_labels = ['positive', 'negative']
 emotion_labels = [subfolder for subfolder in os.listdir(train_folder_path) if os.path.isdir(os.path.join(train_folder_path, subfolder))]
 print(emotion_labels)
 num_classes = len(emotion_labels)
 
 DISPLAY = False
-
-# # Create datasets and data loaders
-# facial_dataset = FacialDataset(dataset_path, emotion_labels)
-# train_size = int(0.9 * len(facial_dataset))
-# val_size = len(facial_dataset) - train_size
-# train_dataset, val_dataset = random_split(facial_dataset, [train_size, val_size])
-
-# batch_size = 64
-# train_loader = DataLoader(train_dataset, batch_size = batch_size, shuffle = True)
-# val_loader = DataLoader(val_dataset, batch_size = batch_size, shuffle = False)
-
-# for images, labels in train_loader:
-#     print(images[0].dtype)
-#     print(labels[0])
-#     break
 
 if DISPLAY:
     # Display a batch of augmented images
@@ -75,11 +55,7 @@ if DISPLAY:
     show_batch(images, labels)
 
 ### ALTERNATIVE DATA APPROACH ###
-
-import torch
-import torchvision.transforms as transforms
 from torchvision.datasets import ImageFolder
-from torch.utils.data import DataLoader
 
 # Directory paths
 train_dir = "/data/eurova/fer/train"
@@ -95,7 +71,7 @@ train_transform = transforms.Compose([
 test_transform = transforms.Compose([
     transforms.Grayscale(num_output_channels = 1),
     transforms.ToTensor(),
-    transforms.Normalize(mean=[0.5], std=[0.5])
+    transforms.Normalize(mean = [0.5], std = [0.5])
 ])
 
 # Datasets
@@ -127,8 +103,9 @@ num_classes = len(emotion_labels)
 #model = FERModel(num_classes = num_classes).to(device)
 #model = FERModel_simple().to(device)
 #model = MyVGGModel(num_classes = num_classes)
-# model = vgg13(pretrained = True)
+#model = vgg13(pretrained = True)
 model = vgg16(pretrained = True)
+
 initial_layer = nn.Conv2d(1, 64, kernel_size = 3, padding = 1)
 model.features[0] = initial_layer
 print(model.features)
@@ -166,7 +143,6 @@ learning_rate = 0.001
 criterion = nn.CrossEntropyLoss()
 # optimizer = torch.optim.Adam(model.parameters(), lr = learning_rate)
 optimizer = optim.SGD(model.parameters(), lr = learning_rate, momentum = 0.9)
-
 
 metrics = []
 

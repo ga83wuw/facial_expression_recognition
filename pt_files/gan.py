@@ -152,7 +152,6 @@ discriminator_optimizer = optim.Adam(discriminator.parameters(), lr = 0.0001, be
 generator_optimizer = optim.Adam(generator.parameters(), lr = 0.0001, betas = (0.5, 0.999))
 
 
-
 for epoch in range(number_of_epochs):
     print(epoch)
     for batch, _ in dataloader:
